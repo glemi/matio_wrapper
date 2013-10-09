@@ -2,16 +2,21 @@
 #define MATVAR_H
 
 #include <QString>
+#include <QList>
 
 #include "matio.h"
 
+#include "matstruct.h"
+
+class MatVar;
+typedef QList<MatVar> MatVars;
 
 class MatVar
 {
 public:
     MatVar();
     MatVar(matvar_t* matvar);
-    ~MatVar();
+    virtual ~MatVar();
 
     QString getName() const;
 
@@ -25,7 +30,10 @@ public:
     int getRank() const;
     int getBytesSize() const;
 
+    QVector<double> getDoubleArrayData();
+    double getDoubleScalarData();
 
+    MatStruct getStruct();
 
 private:
     matvar_t* matvarData;

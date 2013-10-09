@@ -16,3 +16,9 @@ QString MatVar::getName() const
 {
     return QString(matvarData->name);
 }
+
+const QVector<double> MatVar::getDoubleArrayData() const
+{
+    const QVector<double> vector;
+    return vector;
+}

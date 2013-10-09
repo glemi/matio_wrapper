@@ -3,12 +3,14 @@
 
 #include "matvar.h"
 
-class MatStruct : public MatVar
+class MatStruct
 {
 public:
     MatStruct(matvar_t* matvar);
 
     MatVars fields();
+
+    const MatVars fields() const;
 
 private:
     MatVars mFields;

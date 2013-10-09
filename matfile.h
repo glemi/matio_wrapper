@@ -25,12 +25,12 @@ public:
     int getDatasetCount() const;
 
 private:
-    mat_t* matdata = NULL;
+    mat_t* matdata;
     //mat_t* const pMatdata = &matdata;
 
     QList<MatVar*> variables;
 
-    bool isvalid = false;
+    bool isvalid;
 
     void iterateVariables();
 

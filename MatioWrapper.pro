@@ -12,15 +12,15 @@ TEMPLATE = lib
 DEFINES += MATIOWRAPPER_LIBRARY
 
 SOURCES += matiowrapper.cpp \
-    matfile.cpp \
-    matvar.cpp \
-    matstruct.cpp
+            matfile.cpp \
+            matvar.cpp \
+            matstruct.cpp
 
 HEADERS += matiowrapper.h\
-        matiowrapper_global.h \
-    matfile.h \
-    matvar.h \
-    matstruct.h
+            matiowrapper_global.h \
+            matfile.h \
+            matvar.h \
+            matstruct.h
 
 unix:!symbian {
     maemo5 {
